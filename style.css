@@ -1,0 +1,289 @@
+*{
+   padding: 0;
+   margin: 0;
+}
+body{
+   margin: 0px 0px;
+   padding: 0;
+   background-color: #121212;
+   color: white;
+   font-family: sans-serif;
+}
+
+
+/* Header CSS */
+header{
+   height: 80px;
+   display: flex;
+   align-items: center;
+   padding: 0px 10vh 0px 10vh;
+   background-color: black;
+   font-size: 16px;
+   line-height: 25px;
+   font-weight: bold;  
+  
+}
+.svg_div{
+   flex: 1;
+}
+.header_svg{
+   flex: 1;
+   height: 41px;
+   width: 132px;
+   display: flex;
+   fill: #fff;
+}
+.div_nav{
+   flex: 2;
+}
+.separador{
+   margin: 32px 17px;
+   background-color: #fff;
+   width: 1px;
+}
+.menu_option{
+   display: flex;
+   list-style: none;
+}
+.nav_link{
+   border-color: 1px solid black;
+   padding: 28px 20px 28px 20px;
+}
+a{
+   text-decoration: none;
+   color: white;
+}
+.nav_hover:hover{
+   color: #1ed760;
+}
+
+
+/* Content CSS */
+
+h1{
+   font-size: 32px;
+   line-height: 32px;
+   letter-spacing: -1.28px;
+}
+h2{
+   font-size: 24px;
+   line-height: 34.8px;
+   letter-spacing: normal;
+}
+h3{
+   font-size: 16px;
+   line-height: normal;
+   letter-spacing: normal;
+}
+h4{
+   font-size: px;
+   line-height: normal;
+   letter-spacing: normal;
+}
+.main{
+   margin-top: 5px;
+   margin-bottom: 20px;
+}
+.main_image{
+   width: 100%;
+}
+
+.plans{
+   border: 0px;
+   margin-top: 70px;
+   margin: 70px 30px 0px 30px;
+}
+.title_section{
+   margin: 0;
+   text-align: center;
+}
+.description{
+   margin-top: 16px;
+   margin-bottom: 32px;
+   text-align: center;
+}
+
+.box{
+   border: 5px solid purple;
+   border-radius: 15px;
+   margin-bottom: 48px;
+   margin-right: 16px;
+   margin-left: 16px;
+   padding: 16px 20px;
+}
+.body-grid{
+   display: grid;
+   grid-template-columns: 1fr 1140px 1fr;
+   grid-template-areas: ". card-grid .";
+   grid-template-rows: 1fr;
+}
+.card-grid{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 1fr 420px 420px;
+   grid-template-areas: "inclusion inclusion inclusion"
+   "individual estudiantes duo"
+   ". familiar .";
+   max-width: 1140px;
+   grid-area: card-grid;
+}
+.text-inclusion{
+   grid-area: text-inclusion;
+
+}
+.inclusion ul li::before {
+   content: "✔  ";
+ }
+.inclusion{
+   grid-area: inclusion;
+   text-align: left;
+   display: grid;
+   grid-template-columns: 1fr 1.3fr 1fr;
+   grid-template-rows: 1fr;
+   grid-template-areas: ". text-inclusion .";
+   margin-top: 32px;
+   margin-bottom: 48;
+   padding: 15px 30px 15px 30px;
+}
+.inclusion-list{
+   padding-left: 0;
+   list-style: none;
+}
+/* .button_box{
+   background-color: #199319;
+   color: white;
+   padding: 15px 25px;
+   border-radius: 24px;
+   text-decoration: none;
+   cursor: pointer;
+   border: none;    
+} */
+.button:hover{
+   transform: scale(1.05);
+}
+/* PLAN INDIVIDUAL */
+.individual{
+   grid-area: individual;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr 1fr 1fr;
+   list-style: square;
+   border-color: #ffd2d7;
+}
+.box-header{
+   display: flex;
+   align-items: center;
+}
+.header-right{
+   flex: 1;
+   text-align: right;
+}
+.header-left{
+   flex: 2
+}
+.box ul{
+   padding: 10px;
+}
+.inclusion ul{
+   padding: 0;
+}
+.box_footer{
+   text-align: center;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr 1fr;
+   grid-template-areas: "button, footer_text";
+   align-items: center;
+}
+.button{
+   grid-area: "button";
+}
+.individual .box_footer .button{
+   background-color: #ffd2d7;
+   color: black;
+   font-size: 16px;
+   line-height: normal;
+   font-weight: 600;
+   padding: 14px 10px;
+   border-radius: 30px;
+   text-decoration: none;
+   cursor: pointer;
+   border: none;   
+}
+.footer_text a{
+   grid-area: "footer_text";
+   font-size: 10px;
+   text-decoration: underline;
+}
+.footer_text{
+   grid-area: "footer_text";
+   font-size: 10px;
+}
+/* PLAN ESTUDIANTES */
+.estudiantes{
+   grid-area: estudiantes;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr 1fr 1fr;
+   list-style: square;
+   border-color: #c4b1d4;
+}
+.estudiantes .box_footer .button{
+   background-color: #c4b1d4;
+   color: black;
+   font-size: 16px;
+   line-height: normal;
+   font-weight: 600;
+   padding: 9px 10px;
+   border-radius: 30px;
+   text-decoration: none;
+   cursor: pointer;
+   border: none;   
+}
+.button_box{
+   color: black;
+}
+
+/* PLAN DUO */
+.duo{
+   grid-area: duo;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr 1fr 1fr;
+   list-style: square;
+   border-color: #ffc862;
+}
+.duo .box_footer .button{
+   background-color: #ffc862;
+   color: black;
+   font-size: 16px;
+   line-height: normal;
+   font-weight: 600;
+   padding: 9px 10px;
+   border-radius: 30px;
+   text-decoration: none;
+   cursor: pointer;
+   border: none;   
+}
+
+/* PLAN FAMILIAR */
+.familiar{
+   grid-area: familiar;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr 1fr 1fr;
+   list-style: square;
+   border-color: #a5bbd1;
+}
+.familiar .box_footer .button{
+   background-color: #a5bbd1;
+   color: black;
+   font-size: 16px;
+   line-height: normal;
+   font-weight: 600;
+   padding: 9px 10px;
+   border-radius: 30px;
+   text-decoration: none;
+   cursor: pointer;
+   border: none;   
+}
